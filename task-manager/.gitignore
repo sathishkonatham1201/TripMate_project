@@ -1,0 +1,5 @@
+node_modules/
+dist/
+server/tasks.db
+server/tasks.db-shm
+server/tasks.db-wal

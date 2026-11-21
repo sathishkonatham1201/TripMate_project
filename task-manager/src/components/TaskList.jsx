@@ -1,0 +1,20 @@
+import TaskItem from './TaskItem.jsx'
+
+export default function TaskList({ tasks, onToggle, onDelete }) {
+  if (tasks.length === 0) {
+    return <p className="empty-message">No tasks here. Add one above.</p>
+  }
+
+  return (
+    <ul className="task-list">
+      {tasks.map((task) => (
+        <TaskItem
+          key={task.id}
+          task={task}
+          onToggle={onToggle}
+          onDelete={onDelete}
+        />
+      ))}
+    </ul>
+  )
+}
